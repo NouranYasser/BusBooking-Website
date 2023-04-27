@@ -1,0 +1,79 @@
+.ssss{
+    background-color: orange;
+}
+.aaaa{
+    background-color: white;
+    width: 600pX;
+    height: 550px;
+  border-radius: 8px;
+}
+
+.form-controlName {
+        border-radius: none;
+        width: 300px;
+        height: 100%;
+        padding: 10px;
+    margin-left: -3%;
+}
+
+
+
+
+.input-form-controlEmail{
+    border-radius: none;
+     width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left: 8%;
+
+}
+.input-form-controlPassword{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left: 3%;
+
+}
+
+.form-controlPhone{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left:30px;
+
+}
+
+.input-form-controlStatus{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left: 5%;
+
+}
+.form-controlRole{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-right:-2px;
+
+}
+
+.nn{
+    margin-right:40px;
+}
+
+.success{
+width:60%;
+background-color: rgb(232, 233, 233);
+
+}
+.role{
+    margin-right: 10%;
+}
+.name{
+    margin-right: 15%;
+}

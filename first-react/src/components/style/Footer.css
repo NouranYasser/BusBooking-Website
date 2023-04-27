@@ -1,0 +1,47 @@
+.footer{
+  width: 100%;
+  background-color: rgb(236, 236, 235);
+  color: black;
+  text-align: center;
+}
+
+.style{
+
+  position: relative;
+}
+
+    
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .box {
+      width: 250px;
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+    }
+    
+    .box h3 {
+      color: #2e2e2e;
+      margin-bottom: 20px;
+    }
+    
+    .box p {
+      font-size: 14px;
+      line-height: 24px;
+      color: #353434;
+    }
+    
+    .box a {
+      font-size: 14px;
+      color: #3b3b3b;
+      text-decoration: none;
+    }
+    
+    .box a:hover {
+      color: #242323;
+    }
+    

@@ -1,0 +1,51 @@
+/* Style the table */
+.table1 {
+    border-collapse: collapse;
+  width: 70%;
+  height: 40%;
+ 
+
+  }
+  
+  /* Style the table header */
+  .table1 thead tr {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+
+  
+  /* Style the table cells */
+  .table1 td {
+    border: 2px solid #faf7f7;
+    padding: 8px;
+  }
+  
+  /* Style the "update" and "delete" buttons */
+  .bu1 {
+    background-color: #dbdddb;
+    border: none;
+    color: rgb(34, 34, 34);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px 2px;
+    cursor: pointer;
+    width: 30%;
+    height: 30%;  
+}
+  
+  /* Style the link inside the buttons */
+  .bu2 {
+    color: rgb(26, 25, 25);
+    text-decoration: none;
+    width: 30%;
+    height: 30%; 
+}
+  
+  /* Style the buttons on hover */
+  .bu1:hover {
+    background-color: #c1c2c1;
+  }
+  

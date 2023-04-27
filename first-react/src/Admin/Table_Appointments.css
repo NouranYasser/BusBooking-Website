@@ -1,0 +1,114 @@
+.my-table {
+  border-collapse: collapse;
+  width: 80%;
+  height: 50%;
+  background-color: white;
+ background-position-x: center;
+
+}
+
+.my-table th, .my-table td {
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  text-align: left;
+}
+
+.my-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+
+  
+}
+a.bu{
+  color: black;
+}
+
+
+
+
+.class {
+  background-color: #dbdddb;
+border-radius: 0%;
+  color: rgb(34, 34, 34);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 3px 2px;
+  cursor: pointer;
+  width: 30%;
+  height: 30%;  
+}
+
+/* Style the link inside the buttons */
+.delete {
+  color: rgb(26, 25, 25);
+  text-decoration: none;
+  width: 30%;
+  height: 30%; 
+}
+
+/* Style the buttons on hover */
+.class:hover {
+  background-color: #caceca;
+}
+
+.update {
+  color: rgb(26, 25, 25);
+  text-decoration: none;
+  width: 50%;
+  height:30px ;
+  border-radius: 0%;   
+
+}
+
+
+
+.bu1:hover {
+  background-color: #e7e9e7;
+}
+
+  .buttonStyle1{
+    left: unset;
+    background-color:#e7e9e7;
+    color: black;
+    width: 150px;
+    height: 30px;
+    border: none;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    margin:1% ;
+
+}
+
+.bb{
+
+  background-color:#eaebec;
+    color: black;
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+}
+.btnUpdate{
+  background-color:#eaebec;
+  color: black;
+position: relative;
+width: 100px;
+height: 30px;
+transform: translateX(-50%);
+border-radius: 20px;
+left: 60px;
+border: none;
+}
+.btnDelete{
+  background-color:#eaebec;
+  color: black;
+position: relative;
+width: 100px;
+height: 30px;
+transform: translateX(-50%);
+border-radius: 20px;
+left: 50px;
+border: none;
+}

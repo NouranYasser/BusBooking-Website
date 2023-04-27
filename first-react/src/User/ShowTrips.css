@@ -1,0 +1,37 @@
+.my-table {
+    border-collapse: collapse;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+   background-position-x: center;
+   margin: 10%;
+  }
+  
+  .my-table th, .my-table td {
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .my-table th {
+    background-color: rgb(250, 194, 91);
+    font-weight: bold;
+  
+    
+  }
+  a.bu{
+    color: black;
+  }
+  
+  
+  .delete-btn {
+    background-color: rgb(250, 194, 91);
+    border-radius: 5px;
+    width: 70%;
+    padding: 1%;
+    margin: 2%;
+   
+}
+
+
+

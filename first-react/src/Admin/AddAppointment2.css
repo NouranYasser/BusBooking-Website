@@ -1,0 +1,72 @@
+.ssss{
+    background-color: orange;
+}
+.aaaa{
+    background-color: white;
+    width: 600pX;
+    height: 550px;
+  border-radius: 8px;
+}
+
+.form-control2{
+        border-radius: none;
+        width: 300px;
+        height: 100%;
+        padding: 10px;
+        margin-left: 4%;
+    
+}
+
+.input-form-control3{
+    border-radius: none;
+     width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left: 8%;
+
+}
+.input-form-control4{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left: -3%;
+
+}
+
+.form-control5{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left:30px;
+
+}
+
+.input-form-control6{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-left: 5%;
+
+}
+.form-control7{
+    border-radius: none;
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin-right:-2px;
+
+}
+
+.eeee{
+    margin-right:40px;
+}
+
+.success{
+width:60%;
+background-color: rgb(232, 233, 233);
+border-radius: 2px;
+
+}

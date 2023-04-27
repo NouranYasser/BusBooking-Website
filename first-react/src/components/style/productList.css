@@ -1,0 +1,12 @@
+.product-List{
+margin-top: 50px;
+display: flex;
+justify-items:center;
+align-items: center;
+flex-direction: row;
+flex-wrap: wrap;
+margin: 5%;
+}
+
+
+

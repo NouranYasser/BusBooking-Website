@@ -1,0 +1,95 @@
+.my-table6 {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .my-table6 th, .my-table6 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .my-table6 th {
+    background-color: #f2f2f2;
+  }
+  
+  .accept-btn6, .delete-btn6 {
+    background-color: #d6d7d8; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-btn6 {
+    background-color: #d6d7d8; 
+    width: 40%;
+    height: 40%;
+  }
+
+.accept-btn6{
+    background-color: #d6d7d8; 
+    width: 40%;
+    height: 40%;
+}
+
+  .accept-btn6:hover, .delete-btn6:hover {
+    opacity: 0.8;
+  }
+  
+.section6{
+    background-color: orange;
+}
+
+.bu6{
+    width: 30%;
+    width: 50%;
+color:black ;
+}
+.ba6{
+    width: 30%;
+    width: 50%;
+color:black ;
+}
+.btnbtn{
+  background-color:#eaebec;
+  color: black;
+position: relative;
+width: 100px;
+height: 30px;
+transform: translateX(-50%);
+border-radius: 20px;
+left: 50px;
+border: none;
+margin: 7%;
+}
+.btnDecline{
+  background-color:#eaebec;
+  color: black;
+position: relative;
+width: 100px;
+height: 30px;
+transform: translateX(-50%);
+border-radius: 20px;
+left: 50px;
+border: none;
+margin: 7%;
+}
+
+.btnAccept{
+  background-color:#eaebec;
+  color: black;
+position: relative;
+width: 100px;
+height: 30px;
+transform: translateX(-50%);
+border-radius: 20px;
+left: 50px;
+border: none;
+margin: 7%;
+}

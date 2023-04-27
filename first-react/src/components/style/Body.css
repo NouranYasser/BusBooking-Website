@@ -1,0 +1,29 @@
+.content {
+  font-size: 30px;
+  line-height: 1.5; 
+  padding: 8px ; 
+  color:white; 
+  background-color:orange;
+}
+body{
+  background:white;
+   -webkit-background-size:cover;
+   background-size: cover;
+  background-position: center ;
+  position: relative;
+  text-align: center;
+  background-color:orange;
+}
+  
+.b{
+  color:white;
+
+}
+.section{
+
+  background-position: center ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(244, 247, 250);
+}
