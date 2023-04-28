@@ -125,25 +125,13 @@ router.get("/getDestinations",async (req, res) => {
 });
 */
 //   SHOW TRIPS
-/*router.get("/:des_name" ,async (req, res) => {
+router.get("/:des_name",authorized ,async (req, res) => {
   const query = util.promisify(conn.query).bind(conn);
   const destinations = await query("SELECT * FROM appointments JOIN destinations ON appointments.id = destinations.id WHERE appointments.to=destinations.des_name & des_name=?",
   [
     req.params.des_name,
   ]);
   res.status(200).json(destinations);
-});*/
-// LIST & SEARCH [ADMIN, USER]
-router.get("/destination", async (req, res) => {
-  const query = util.promisify(conn.query).bind(conn);
-
-  let search = "";
-  if (req.query.search) {
-    // QUERY PARAMS
-    search = `where  appointments.to LIKE '%${req.query.search}%'`;
-  }
-  const appointments = await query(`select * from appointments ${search}`);
-  res.status(200).json(appointments);
 });
 
 module.exports = router;

@@ -16,14 +16,21 @@ const users = require("../routes/users");
         if (!errors.isEmpty()) {
           return res.status(400).json({ errors: errors.array() });
         }
+        // 3- PREPARE REQUEST OBJECT
+        const request = {
+          from: req.body.from,
+          to: req.body.to,
+          day: req.body.day,
+          time: req.body.time,
+          status:req.body.status,
+          created_at: Date.now(),
+          user_id:req.body.user_id
+          //user_id: res.locals.users.id
+        };
+  
         // 4 - INSERT REQUEST INTO DB
         const query = util.promisify(conn.query).bind(conn);
-        let appointment =await query("select * from appointments where id=  ? ", req.body.id);
-        appointment[0] = {...appointment[0],user_id:req.body.user_id}
-       delete appointment[0].id;
-        
-        await query("Insert into requests set  ? ", appointment[0]);
-        //await query("insert into requests set ? ", request);
+        await query("insert into requests set ? ", request);
         res.status(200).json({
           msg: "request created successfully !",
         });
