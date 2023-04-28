@@ -100,7 +100,6 @@ router.post(
         email: req.body.email,
         password: await bcrypt.hash(req.body.password, 10),
         token: crypto.randomBytes(16).toString("hex"),
-        phone:req.body.phone,
       };
 
      

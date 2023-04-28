@@ -13,7 +13,6 @@ const appointments = require("./routes/appointments");
 const users = require("./routes/users");
 const requests = require("./routes/requests");
 const destinations = require("./routes/destinations");
-const search = require("./routes/search");
 // Run The App "server"
 app.listen(8000,"localhost",()=>{
     console.log("SERVER IS RUNNING");
@@ -25,7 +24,6 @@ app.use("/appointments",appointments);
 app.use("/users",users);
 app.use("/requests",requests);
 app.use("/destinations",destinations);
-app.use("/search",search);
 
 
 
