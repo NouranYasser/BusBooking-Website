@@ -8,7 +8,7 @@
   import UserHome from "./User/UserHome.js";
   import View_Appointment from "./User/View_Appointment";
   import YourTrip from "./User/YourTrip";
- 
+  import UpdateDestination from "./Admin/UpdateDestination";
   import ShowTrips from "./User/ShowTrips";
   import About2 from "./User/About2";
   import TravelerDestination2 from "./User/TravelerDestination2";
@@ -24,9 +24,11 @@
   import AddTraveler from "./Admin/AddTraveler";
   import AddDestination from "./Admin/AddDestination";
   import UpdateTraveler from "./Admin/UpdateTraveler";
-  import AddRequest from "./User/AddRequest";
+  import History from "./User/History";
   import Guest from "./middleware/Guest";
   import Admin from "./middleware/Admin";
+  import ViewDestinations from "./User/ViewDestinations";
+  
   //import ListSearch from "./User/listSerach";
  
   export const router = createBrowserRouter([
@@ -49,6 +51,10 @@
         {
           path: "/AddDestination",
           element: <AddDestination/>,
+        },
+        {
+          path: "/UpdateDestination/:id",
+          element: <UpdateDestination/>,
         },
         {
           path: "/UpdateTraveler/:id",
@@ -116,8 +122,8 @@
       element:<UserHome/>
     },
     {
-      path: "/AddRequest",
-      element:<AddRequest/>
+      path: "/History",
+      element:<History/>
     },
 
     {
@@ -144,9 +150,14 @@
       path: "/TravelerDestination2",
       element:<TravelerDestination2/>
     },
- 
- 
-   
+    {
+      path :"/ViewDestinations",
+      element:<ViewDestinations/>
+    }
+    
+    
+
+    
    /* {
       path:"/listSerach",
       element:<ListSearch/>

@@ -6,7 +6,8 @@
 }
 
 header{
-    width: 100%;
+    margin-left: 95px;
+    width: 1400px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -17,10 +18,10 @@ header{
     z-index: 1000;
     padding: 2rem;
     background-color: whitesmoke;
-    width: 93%;
-    height: 10px;
+   
+    
     position: fixed;
-    margin-left: 1%;
+   
     z-index: 1;
  
  
@@ -38,6 +39,7 @@ header .navbar a{
     border-radius: .5rem;
     color:var(--dark-blue);
     text-decoration: none;
+   
 }
 
 header .navbar a.active,
@@ -51,9 +53,21 @@ header.sticky{
     background:#fff;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
-.logoutbtn{
-    
+.logoutbtn {
+    font-size: 1.7rem;
+    margin-left: .7rem;
+    padding:.5rem 2rem;
+    border-radius: .5rem;
+    color:var(--dark-blue);
+    text-decoration: none;
+    border: none;
 }
+
+.divlogout{
+    margin-left: -450px;
+    margin-top: -20px;
+}
+
 
 
 

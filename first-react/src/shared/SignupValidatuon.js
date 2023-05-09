@@ -1,15 +1,13 @@
 function validation(values) {
     let errors = {}
-    const name_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    //const name_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$/
     
     if (values.name === "") {
-        errors.name = "name should not be empty"
-      } else if (!name_pattern.test(values.name)) {
-        errors.name = "name format is invalid"
-      } else {
+        errors.name = "name should not be empty"}
+       else {
         errors.name = ""
       }
     if (values.email === "") {

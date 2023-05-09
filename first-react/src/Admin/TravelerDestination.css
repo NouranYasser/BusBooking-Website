@@ -1,4 +1,5 @@
 /* Style the table */
+
 .table1 {
   border-collapse: collapse;
 width: 70%;
@@ -130,7 +131,7 @@ background-color: white;
     margin-top: 7%;
 }
 
-.destin{
+.Destina{
     background-color:#eaebec;
     color: black;
     width: 200px;
@@ -149,6 +150,7 @@ transform: translateX(-50%);
 border-radius: 20px;
 left: 50px;
 border: none;
+margin: 30px;
 }
 
 

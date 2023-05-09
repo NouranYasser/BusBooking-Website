@@ -3,8 +3,16 @@ import "./View_Appointment.css";
 import { useState , useEffect} from "react"; 
 import axios from "axios";
 import { getAuthUser } from "../helper/Storage";
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const ListSearch = () => {
+  const [userId, setUserId] = useState(getAuthUser().id);
+  const [submit, setsubmit] = useState(false);
+  const location = useLocation();
+  const auth = getAuthUser();
+  const searchParams = new URLSearchParams(location.search);
+  const searchterm = searchParams.get('searchTerm');
   //const auth = getAuthUser();
   const [appointments, setAppointments] = useState({
     loading: true,
@@ -12,11 +20,14 @@ const ListSearch = () => {
     err: null,
     reload: 0,
   });
-
+  const navigate = useNavigate();
   useEffect(() => {
+    const data ={
+      user_id:userId
+    }
     setAppointments({ ...appointments, loading: true });
     axios
-      .get("http://localhost:8000/appointments/search")
+      .post(`http://localhost:8000/appointments/saveSearch?search=${searchterm}`,{...data})
       .then((resp) => {
         setAppointments({ ...appointments, results: resp.data, loading: false, err: null });
       })
@@ -28,9 +39,27 @@ const ListSearch = () => {
         });
       });
   }, [appointments.reload]);
+  const requestAppointment = (id) => {
+    const data ={
+      user_id:auth.id,
+      id:id
+    }
+    axios
+      .post(`http://localhost:8000/requests/create`,{...data})
+      .then((resp) => {
+        setAppointments({ ...appointments, reload: appointments.reload + 1 });
+        setsubmit(true);
+        navigate("/yourTrip");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
 
   return (
     <> 
+    <section className="SectionTrip">
       <table striped bordered hover className="my-table">
         <thead>
           <tr>
@@ -54,15 +83,19 @@ const ListSearch = () => {
               <td> {appointment.max_travelers} </td>
               <td>
               <button
-                  className="btn btn-sm btn-danger" type="submit" 
-                  >
-                  Book
+                  className="btnDelete"
+                  onClick={(e) => {
+                    requestAppointment(appointment.id);
+                  }}
+                >
+                  Request
                 </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      </section>
     </>
   );
 };

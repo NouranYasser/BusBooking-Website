@@ -52,7 +52,7 @@ function App() {
      <br></br>
     
         <div className="mb-2">
-          <label htmlFor="to" className="eeee">to  </label>
+          <label htmlFor="to" className="eeee">To </label>
           <input
             placeholder="Enter description"
             className=" input-form-control3"
@@ -63,10 +63,9 @@ function App() {
 <br></br>
         </div>
         <div className="mb-2">
-          <label htmlFor="ticket_price" className="eeee">ticket_price</label>
+          <label htmlFor="ticket_price" className="eeee">Ticket Price</label>
           <input
             type="int"
-            placeholder="Enter price"
             className="input-form-control4"
             value={ticket_price}
             onChange={(e) => setTicketPrice(e.target.value)}
@@ -74,7 +73,7 @@ function App() {
         </div>
        <br></br> 
         <div className="mb-2">
-          <label htmlFor="day" className="eeee">day:</label>
+          <label htmlFor="day" className="eeee">Day</label>
           <input
             id="day"
             className="form-control5"
@@ -85,7 +84,7 @@ function App() {
         <br></br>
   
         <div className="mb-2">
-          <label htmlFor="time" className="eeee">time:</label>
+          <label htmlFor="time" className="eeee">Time</label>
           <input
             id="time"
             className="input-form-control6"
@@ -97,7 +96,7 @@ function App() {
 <br></br>
 
         <div className="mb-2">
-          <label htmlFor="max_travelers">max_travelers</label>
+          <label htmlFor="max_travelers">Max Travelers</label>
           <input
             id="max_travelers"
             className="form-control7"
@@ -105,7 +104,7 @@ function App() {
             onChange={(e) => setMaxTravelers(e.target.value)}
           />
         </div>
-          <button className="success"> Add</button>  
+          <button className="AddAppointment2"> Add</button>  
       </form>
     </div>
     </section>

@@ -9,6 +9,9 @@ const AdminHome  = () => {
     return (<> 
   <Sidebar/>  
   <Header/>
+  <section className="home"> 
+
+  </section>
 
 
 

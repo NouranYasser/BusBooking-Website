@@ -1,10 +1,10 @@
-.ssss{
+.travel{
     background-color: orange;
 }
-.aaaa{
+.Traveler{
     background-color: white;
     width: 600pX;
-    height: 550px;
+    height: 630px;
   border-radius: 8px;
 }
 
@@ -13,18 +13,15 @@
         width: 300px;
         height: 100%;
         padding: 10px;
-    margin-left: -3%;
+         margin-left: -6%;
 }
-
-
-
 
 .input-form-controlEmail{
     border-radius: none;
      width: 300px;
     height: 100%;
     padding: 10px;
-    margin-left: 8%;
+    margin-left: 4%;
 
 }
 .input-form-controlPassword{
@@ -32,7 +29,7 @@
     width: 300px;
     height: 100%;
     padding: 10px;
-    margin-left: 3%;
+    margin-left: -1%;
 
 }
 
@@ -41,7 +38,7 @@
     width: 300px;
     height: 100%;
     padding: 10px;
-    margin-left:30px;
+    margin-left:20px;
 
 }
 
@@ -50,7 +47,7 @@
     width: 300px;
     height: 100%;
     padding: 10px;
-    margin-left: 5%;
+    margin-left: 3%;
 
 }
 .form-controlRole{
@@ -58,7 +55,7 @@
     width: 300px;
     height: 100%;
     padding: 10px;
-    margin-right:-2px;
+    margin-right:-12px;
 
 }
 
@@ -66,14 +63,17 @@
     margin-right:40px;
 }
 
-.success{
-width:60%;
-background-color: rgb(232, 233, 233);
-
-}
 .role{
     margin-right: 10%;
 }
 .name{
     margin-right: 15%;
+}
+.AddTraveler{
+    width:40%;
+    height: 40px;
+    background-color: rgb(232, 233, 233);
+    border-radius: 8px;
+    margin: 30px;
+    border: none;
 }

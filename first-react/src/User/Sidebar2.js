@@ -40,8 +40,8 @@ const Sidebar  = ({children}) => {
             icon:<FaUserAlt/>
         },
         {
-            path:"/addrequest",
-            name:"Add Request",
+            path:"/History",
+            name:"History",
             icon:<FaShoppingBag/>
         },
         {

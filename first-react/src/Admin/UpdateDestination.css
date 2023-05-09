@@ -1,32 +1,23 @@
-.sec{
+.sectionUpdate{
     background-color: orange;
 }
-.YUUYI{
+.YUUYI2{
     background-color: white;
     width: 500px;
     height: 400px;
+    border-radius: 30px;
 }
-.in{
-        width: 250px;
-        height: 30px;
+
+.labelUpdate{
+    width: 200px;
+    height: 25px;
+    margin: 50px;
 }
-.la{
-    width: 250px;
-    height: 30px;
-}
-.UpdateTraveler{
+.buttonUpdateDes{
     width:40%;
     height: 40px;
     background-color: rgb(232, 233, 233);
     border-radius: 50px;
     margin: 10px;
     border: none;
-}
-.st{
-    padding: 10px;
-    margin: 10px;
-}
-.ro{
-    padding: 10px;
-    margin: 10px;
 }

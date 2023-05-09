@@ -34,7 +34,6 @@ router.post("",
 
   router.put(
     "/:id", // params
-    
     async (req, res) => {
       try {
         // 1- VALIDATION REQUEST [manual, express validation]
@@ -54,7 +53,8 @@ router.post("",
   
         // 3- PREPARE DESTINATION OBJECT
         const destinationObj = {
-          des_name: req.body.des_name
+          des_name: req.body.des_name,
+          
         };
   
         // 4- UPDATE DESTINATION
@@ -68,9 +68,9 @@ router.post("",
       }
     }
   );
+  
 
-
-// Delete destination by id
+// Delete a destination by id
 router.delete('/:id', (req, res) => {
     const id = req.params.id;
     const sql = `DELETE FROM destinations WHERE id = ${id}`;
@@ -94,14 +94,17 @@ router.get("/getDestinations",async (req, res) => {
   res.status(200).json(destinations);
 });
 
-//   SHOW TRIPS
-router.get("/:des_name",authorized ,async (req, res) => {
+// LIST & SEARCH [ADMIN, USER]
+router.get("/destination", async (req, res) => {
   const query = util.promisify(conn.query).bind(conn);
-  const destinations = await query("SELECT * FROM appointments JOIN destinations ON appointments.id = destinations.id WHERE appointments.to=destinations.des_name & des_name=?",
-  [
-    req.params.des_name,
-  ]);
-  res.status(200).json(destinations);
+
+  let search = "";
+  if (req.query.search) {
+    // QUERY PARAMS
+    search = `where  appointments.to LIKE '%${req.query.search}%'`;
+  }
+  const appointments = await query(`select * from appointments ${search}`);
+  res.status(200).json(appointments);
 });
 
 module.exports = router;

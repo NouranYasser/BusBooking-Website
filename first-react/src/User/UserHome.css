@@ -10,8 +10,8 @@
 }
 .StyleA{
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 500px;
     border-radius: 10px;
     background-color:#fff;
     display: flex;
@@ -23,9 +23,8 @@
 
 .StyleB{
     background-position: center;
+    
 }
-
-
 
 .style{
   background-position: center;
@@ -150,16 +149,24 @@ color: rgb(26, 19, 54);
     display: inline-block;
     padding: 0px;
     margin-right: 75px;
-color: rgb(26, 19, 54);
+    color: rgb(26, 19, 54);
 }
 .button2222{
     color: rgb(26, 19, 54); 
-     width: 80%;
-    border: 4px ;
-    border-radius: 8px;
+     width: 210px;
+     height: 40px;
+    border: 4px ; 
+    border-radius: 50px;
+    margin: 30px;
 }
-
-
+.history{
+    color: rgb(26, 19, 54); 
+     width: 40%;
+     height: 30px;
+    border: 4px ;
+    border-radius: 50px; 
+    margin-left:300px;
+}
 
 .div{
     width: 50px;
@@ -178,7 +185,7 @@ color: rgb(26, 19, 54);
     font-family: 'poppins',sans-serif;
   }
   .searchbar{
-  width: 500px;
+  width: 800px;
   height: 40px;
   background-color: white;
   display: flex;
@@ -195,5 +202,5 @@ color: rgb(26, 19, 54);
     font-size: 20px;
     color: black;
     height: 3px;
-    width: 350px;
+    width: 500px;
   }

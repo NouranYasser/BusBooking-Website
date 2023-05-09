@@ -1,6 +1,7 @@
 import React, { useState  } from "react";
 import { useNavigate } from "react-router-dom";
 import { setAuthUser } from "../helper/Storage";
+import '../components/style/login.css'
 
 import axios from "axios";
 
@@ -30,8 +31,9 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+   <section className="login">
+   <div className="divLogin">
+      <h1 className="log">Login</h1>
       {errors.length > 0 && (
         <div>
           <h2>Errors:</h2>
@@ -44,8 +46,8 @@ const Login = () => {
       )}
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Email:</label>
-          <input
+          <label htmlFor="email" className="emaillogin" >Email</label>
+          <input className="Emaillogin"
             type="email"
             id="email"
             name="email"
@@ -54,8 +56,8 @@ const Login = () => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
-          <input
+          <label htmlFor="password">Password</label>
+          <input className="passwordlogin"
             type="password"
             id="password"
             name="password"
@@ -63,9 +65,10 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="buttonlogin">Login</button>
       </form>
     </div>
+    </section>
   );
 };
 

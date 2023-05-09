@@ -20,14 +20,19 @@ const Header = () => {
     <nav className="navbar">
       
       <ul>
-       
-          <Link to="/">Home</Link>
-          <li ><button className="logoutbtn" onClick={handleLogout}>
+          <div className="divHome">
+          <a to="/">Home</a>
+          </div>
+         
+          <div className="divHome">
+            
+         <a  onClick={handleLogout}>
            Logout
-          </button></li>
+          </a>
+          </div>
+          </ul>
        
-       
-      </ul>
+      
       
     </nav>
   </header>

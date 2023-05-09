@@ -86,7 +86,7 @@ const Requests = () => {
               <td>{request.from} </td>
               <td> {request.to} </td>
               <td> {request.day} </td>
-              <td> {request.time} </td>
+              <td> {request.time1} </td>
               <td> {request.status} </td>    
               <td> {request.user_id} </td>
               <td>

@@ -10,7 +10,7 @@ section{
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(244, 247, 250);
+    background-color: orange;
 }
  
 .nour{
@@ -64,18 +64,6 @@ h2{
     margin-top: 5px;
 }
 
-button{
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 600;
-    margin-top: 10px;
-
-}
 
 .forget{
     margin: -15px 0 15px;
@@ -105,4 +93,51 @@ button{
 }
 .body{
     background-color:orange;
+}
+
+
+.login{
+   background-color: orange;
+ 
+}
+.divLogin{
+    background-color: white;
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+}
+.emaillogin{
+    padding: 20px;
+}
+
+
+.Emaillogin{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+   background-color: white;
+   margin: 20px;
+}
+.passwordlogin{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+   background-color: white;
+}
+
+
+
+.buttonlogin{
+width: 300px;
+height: 40px;
+border-radius: 40px;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: 1em;
+font-weight: 600;
+margin-top: 50px;
+}
+.log{
+    margin: 10px;
 }

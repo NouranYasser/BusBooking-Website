@@ -3,25 +3,25 @@ import "./View_Appointment.css";
 import { useState , useEffect} from "react"; 
 import axios from "axios";
 import { getAuthUser } from "../helper/Storage";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import myImage from './images.png';
+
 
 const View_Appointment = () => {
   const auth = getAuthUser();
+  const [submit, setsubmit] = useState(false);
   const [appointments, setAppointments] = useState({
+    
     loading: true,
     results: [],
     err: null,
     reload: 0,
   });
-
-  const [fromQuery, setFromQuery] = useState("");
-  const [toQuery, setToQuery] = useState("");
-
+  const navigate = useNavigate();
   useEffect(() => {
     setAppointments({ ...appointments, loading: true });
     axios
-      .get("http://localhost:8000/appointments/getAppointments")
+      .get(`http://localhost:8000/appointments/getAppointments`)
       .then((resp) => {
         setAppointments({ ...appointments, results: resp.data, loading: false, err: null });
       })
@@ -34,32 +34,34 @@ const View_Appointment = () => {
       });
   }, [appointments.reload]);
 
-  return (
 
+
+  const requestAppointment = (id) => {
+    const data ={
+      user_id:auth.id,
+      id:id
+    }
+    axios
+      .post(`http://localhost:8000/requests/create`,{...data})
+      .then((resp) => {
+        setAppointments({ ...appointments, reload: appointments.reload + 1 });
+        setsubmit(true);
+        navigate("/yourTrip");
+      })
+      .catch((err) => {
+        console.log(err);
+       
+      });
+  };
+
+  return (
     <> 
-    <Link to="/AddRequest">
-        <button className="bb"> Add Request</button>
-      </Link>
       <table striped bordered hover className="my-table">
+
         <thead>
           <tr>
-          <th> Trip Number</th>
-            <th>
-              <input
-                type="text"
-                placeholder="From"
-                value={fromQuery}
-                onChange={(e) => setFromQuery(e.target.value)}
-              />
-            </th>
-            <th>
-              <input
-                type="text"
-                placeholder="To"
-                value={toQuery}
-                onChange={(e) => setToQuery(e.target.value)}
-              />
-            </th>
+            <th>From</th>
+            <th>To</th>
             <th>Ticket-Price</th>
             <th>Day</th>
             <th>Time</th>
@@ -69,14 +71,9 @@ const View_Appointment = () => {
         </thead>
         <tbody>
           {appointments.results
-            .filter((appointment) => {
-              const fromMatch = appointment.from.toLowerCase().includes(fromQuery.toLowerCase());
-              const toMatch = appointment.to.toLowerCase().includes(toQuery.toLowerCase());
-              return fromMatch && toMatch;
-            })
             .map((appointment) => (
               <tr key={appointment.id}>
-                <td>{appointment.id} </td>
+                
                 <td>{appointment.from} </td>
                 <td> {appointment.to} </td>
                 <td> {appointment.ticket_price}</td>
@@ -84,9 +81,16 @@ const View_Appointment = () => {
                 <td> {appointment.time1} </td>
                 <td> {appointment.max_travelers} </td>
                 <td>
-                  <button className="btn" type="submit">
-                    Request
-                  </button>
+                <Link to = "/yourTrip">
+                <button
+                  className="btnDelete"
+                  onClick={(e) => {
+                    requestAppointment(appointment.id);
+                  }}
+                >
+                  Request
+                </button>
+                </Link>
                 </td>
               </tr>
             ))}

@@ -53,10 +53,10 @@ const Travelers = () => {
             <th>ID</th>
             <th>name</th>
             <th>Email</th>
-            <th>Password</th>
+            
             <th>Phone</th>
             <th>Status</th>
-            <th>token</th>
+            
             <th>role</th>
             <th>Actions</th>
           </tr>
@@ -67,10 +67,10 @@ const Travelers = () => {
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>{user.email} </td>
-              <td> {user.password} </td>
+              
               <td>{user.phone}</td>
               <td> {user.status} </td>
-              <td> {user.token} </td>
+              
               <td> {user.role} </td>
               <td>
                 
@@ -97,3 +97,9 @@ const Travelers = () => {
 };
 
 export default Travelers;
+
+
+//<th>Password</th>
+//<th>token</th>
+//<td> {user.password} </td>
+//<td> {user.token} </td>

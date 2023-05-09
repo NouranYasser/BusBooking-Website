@@ -1,3 +1,7 @@
+.appointment{
+  background-color: orange;
+
+}
 .my-table {
   border-collapse: collapse;
   width: 80%;
@@ -89,6 +93,7 @@ border-radius: 0%;
     height: 30px;
     border-radius: 20px;
     border: none;
+    margin-top: 70px;
 }
 .btnUpdate{
   background-color:#eaebec;

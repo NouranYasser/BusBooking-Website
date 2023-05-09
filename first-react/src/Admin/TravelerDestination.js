@@ -1,12 +1,11 @@
 import React from "react";
 import "./TravelerDestination.css";
 import { useState , useEffect} from "react"; 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { getAuthUser } from "../helper/Storage";
 
 const TravelerDestination = () => {
-  const auth = getAuthUser();
   const [destinations, setDestinations] = useState({
     loading: true,
     results: [],
@@ -44,13 +43,12 @@ const TravelerDestination = () => {
   return (
     <>
       <Link to="/AddDestination">
-        <button className="destin"> Add New Destination</button>
+        <button className="Destina" > Add New Destination</button>
       </Link>
 
       <table striped bordered hover className="my-table">
         <thead>
           <tr>
-            <th>ID</th>
             <th>Destination </th>
             <th>Options</th>
           </tr>
@@ -58,9 +56,11 @@ const TravelerDestination = () => {
         <tbody>
           {destinations.results.map((destination) => (
             <tr key={destination.id}>
-              <td>{destination.id}</td>
               <td>{destination.des_name} </td>
               <td>
+              <Link to={"/UpdateDestination/" + destination.id}>
+                  <button className="buto">Update</button>
+                </Link>
                 <button
                   className="D"
                   onClick={(e) => {
@@ -68,7 +68,7 @@ const TravelerDestination = () => {
                   }}>
                   Delete
                 </button>
-                <Link to="/UpdateDestination" ><button className='buto'>Update</button></Link>
+               
               </td>
             </tr>
           ))}

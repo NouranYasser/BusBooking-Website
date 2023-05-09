@@ -1,0 +1,35 @@
+.Destination{
+    background-color: orange;
+}
+.divv{
+    background-color: white;
+    width: 600pX;
+    height: 350px;
+  border-radius: 8px;
+  margin: 200px;
+  color: black;
+
+}
+
+.form-controlDes{
+        width: 300px;
+        height: 40px;
+       padding: 9px;
+    }
+
+.ee{
+    margin-right:20px;
+ 
+  }
+
+.succ{
+width:250px;
+height: 40px;
+background-color: rgb(232, 233, 233);
+border: none;
+border-radius: 20px;
+margin: 60px;
+}
+.hh{
+padding: 10px;
+}

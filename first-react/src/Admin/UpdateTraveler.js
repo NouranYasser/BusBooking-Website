@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {  useParams } from "react-router-dom";
+import "./UpdateTraveler.css";
 
- import "./UpdateTraveler.css";
-// import Sidebar from "../sidebar";
+
 
 function UpdateTraveler() {
   const [status, setstatus] = useState("");
@@ -29,7 +29,7 @@ function UpdateTraveler() {
   };
 
   return (
-    <section class name="ooo">
+    <section className="sec">
       <div className="YUUYI">
      
      <br></br>
@@ -59,7 +59,7 @@ function UpdateTraveler() {
         <br></br>
         <br></br>
 
-        <button type="submit" className="Up">Update</button>
+        <button type="submit" className="UpdateTraveler">Update</button>
         
       </form>
       {message && <p>{message}</p>}

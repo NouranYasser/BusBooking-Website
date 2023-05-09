@@ -1,19 +1,19 @@
 import React from "react";
 import "./Table_Appointments.css";
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import { getAuthUser } from "../helper/Storage";
+
+
 
 const Table_Appointments = () => {
-  const auth = getAuthUser();
   const [appointments, setAppointments] = useState({
     loading: true,
     results: [],
     err: null,
     reload: 0,
   });
-
+ 
   useEffect(() => {
     setAppointments({ ...appointments, loading: true });
     axios
@@ -48,15 +48,15 @@ const Table_Appointments = () => {
 
   return (
     <>
-     <section>
+    
       <Link to="/AddAppointment2">
         <button className="bb"> Add New Appointment</button>
       </Link>
-
+      <section className="appointment">
       <table striped bordered hover className="my-table">
         <thead>
           <tr>
-            <th>ID</th>
+           
             <th>From</th>
             <th>To</th>
             <th>Ticket-Price</th>
@@ -69,7 +69,7 @@ const Table_Appointments = () => {
         <tbody>
           {appointments.results.map((appointment) => (
             <tr key={appointment.id}>
-              <td>{appointment.id}</td>
+              
               <td>{appointment.from} </td>
               <td> {appointment.to} </td>
               <td> {appointment.ticket_price}</td>

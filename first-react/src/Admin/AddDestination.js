@@ -1,6 +1,6 @@
 import React from "react";
 //import "./AddAppointment.css";
-import "./AddAppointment2.css"
+import "./AddDestination.css"
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -24,24 +24,24 @@ function App() {
   }
 
   return (
-   <section className="ssss">
-   <div className="aaaa">
+   <section className="Destination">
+   <div className="divv">
       <form onSubmit={handleSubmit}>
   <br></br>
    <br></br>   
-        <h2>Add Destination</h2>
+        <h2 className="">Add Destination</h2>
       
         <div className="mb-2">
-          <label htmlFor="from"  className="eeee">Destination Name </label>
+          <label htmlFor="from"  className="ee">Destination Name </label>
           <input
             placeholder="Enter from"
-            className="form-control2"
+            className="form-controlDes"
             value={des_name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
      <br></br>
-          <button className="success"> Add</button>  
+          <button className="succ"><h3>Add</h3></button>  
       </form>
     </div>
     </section>
