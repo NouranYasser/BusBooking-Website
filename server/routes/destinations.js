@@ -68,9 +68,9 @@ router.post("",
       }
     }
   );
-// DELETE DESTINATION [ADMIN]
 
-// Delete a destination by id
+
+// Delete destination by id
 router.delete('/:id', (req, res) => {
     const id = req.params.id;
     const sql = `DELETE FROM destinations WHERE id = ${id}`;
@@ -94,18 +94,6 @@ router.get("/getDestinations",async (req, res) => {
   res.status(200).json(destinations);
 });
 
-// SHOW  SPECIFIC DESTINATIONS [ADMIN, USER]
-/*router.get("/:id",authorized ,async (req, res) => {
-  const query = util.promisify(conn.query).bind(conn);
-  const destination = await query("select * from destinations where id = ?", [
-    req.params.id,
-  ]);
-  if (!destination[0]) {
-    res.status(404).json({ ms: "destination not found !" });
-  }
-  res.status(200).json(destination[0]);
-});
-*/
 //   SHOW TRIPS
 router.get("/:des_name",authorized ,async (req, res) => {
   const query = util.promisify(conn.query).bind(conn);
