@@ -69,25 +69,7 @@ router.post("",
     }
   );
 // DELETE DESTINATION [ADMIN]
-/*router.delete(
-  "/:id", // params
-  admin,
-  async (req, res) => {
-    try {
-      // 1- CHECK IF APPOINTMENT EXISTS OR NOT
-      const query = util.promisify(conn.query).bind(conn);
-      const destination = await query("select * from destinations where id = ?", [
-        req.params.id,
-      ]);
-      if (!destination[0]) {
-        res.status(404).json({ ms: "destination not found !" });
-      }
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  }
-);
-*/
+
 // Delete a destination by id
 router.delete('/:id', (req, res) => {
     const id = req.params.id;
