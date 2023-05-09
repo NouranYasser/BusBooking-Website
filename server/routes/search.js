@@ -40,7 +40,7 @@ router.get("", async (req, res) => {
     }
   );
 
-//  MAKE REQUEST[USER]
+//  Your Trips
 router.get(
   "/myTrips/:user_id",
   async (req, res) => {
